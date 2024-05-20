@@ -72,7 +72,7 @@ def mk_kelly_deck():
     done, tts_all = set(), []
     folkets_map = mk_fokets_map()
     lemma_all = kelly.getroot().findall('./Lexicon/LexicalEntry/Lemma')
-    f = open("kelly.csv", "w")
+    f = open(f"{cache}/kelly.csv", "w")
     for lemma in lemma_all:
         word = lemma.find(".//feat[@att='writtenForm']").attrib['val']
         prefix = ""
@@ -85,7 +85,7 @@ def mk_kelly_deck():
         if wkey in done:
             continue
         elif wkey in folkets_map:
-            front = f"{prefix}{word} [sound:sv-kelly-{kidx}.mp3]"
+            front = f"{prefix}{word}<br>[sound:sv-kelly-{kidx}.mp3]"
             tts_all.append((f"{media_cache}/sv-kelly-{kidx}.mp3", word))
             done.add(wkey)
             back = ("<ol>" +
@@ -108,7 +108,7 @@ def mk_idioms_deck():
             text = idiom.attrib["value"]
             if (t := idiom.find("./translation")) is not None:
                 idx += 1
-                front = f"{text} [sound:sv-idiom-{idx}.mp3]"
+                front = f"{text}<br>[sound:sv-idiom-{idx}.mp3]"
                 tts_all.append((f"{media_cache}/sv-idiom-{idx}.mp3", text))
                 back = t.attrib["value"]
                 entry = f"{front}\t{back}\t{idx}\n"

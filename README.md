@@ -1,13 +1,17 @@
 # Anki deck snippets
 
 This is a small collection of my snippets for creating [Anki] decks
-for language learning (only Swedish at this point). I run the scripts
-manually to generate the deck (.csv) and media (.mp3) files to be
-imported into Anki.  The generated files are placed in
-`~/.cache/decks` by default, see [here][import csv] and [here][import
-media] for import instructions.
+for language learning (only Swedish at this point). You can get the
+[shared decks] on ankiweb.
+
+Feel free to generate the decks by yourself to suit your needs. I run
+the scripts manually to generate the deck (.csv) and media (.mp3)
+files to be imported into Anki.  All downloaded and generated files
+(csv, xml, mp3) are placed in `~/.cache/decks`, see [here][import csv]
+and [here][import media] for import instructions.
 
 [Anki]: https://apps.ankiweb.net/
+[shared decks]: https://ankiweb.net/shared/by-author/120881044
 [import csv]: https://docs.ankiweb.net/importing/text-files.html
 [import media]: https://docs.ankiweb.net/media.html
 
